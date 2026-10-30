@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071629">
+<title>Future Fit International</title>
+<meta name="description" content="Future Fit International - Your global journey starts here.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#f8f9fc;color:#152238}
+:root{--navy:#071629;--blue:#102c4c;--gold:#d6ad62;--white:#fff}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:100;border-bottom:1px solid #ffffff18}
+.nav{max-width:1200px;margin:auto;padding:17px 6%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:18px;letter-spacing:.5px}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:25px;align-items:center}
+nav a{color:#e3e8ef;text-decoration:none;font-size:13px}
+nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{background:linear-gradient(90deg,#061629ed 0%,#061629b8 48%,#06162940 100%),url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:590px;display:flex;align-items:center;color:white}
+.hero-content{max-width:1200px;width:100%;margin:auto;padding:80px 7%}
+.tag{color:var(--gold);letter-spacing:3px;font-size:12px;font-weight:700;margin-bottom:20px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,76px);line-height:1.12;max-width:750px;margin-bottom:23px}
+h1 span{color:var(--gold)}
+.hero p{max-width:520px;color:#d9e0ea;line-height:1.8;font-size:16px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:14px 25px;border-radius:5px;text-decoration:none;font-weight:700;font-size:13px;display:inline-block}
+.primary{background:var(--gold);color:#101d2c}
+.secondary{border:1px solid #ffffff80;color:white}
+section{padding:85px 7%}
+.container{max-width:1120px;margin:auto}
+.heading{text-align:center;margin-bottom:45px}
+.heading small{color:#b38a45;font-weight:800;letter-spacing:3px}
+.heading h2{font-family:'Playfair Display',serif;font-size:37px;color:var(--navy);margin:12px 0}
+.heading p{color:#6b7788;line-height:1.8}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about img{width:100%;height:380px;object-fit:cover;border-radius:8px}
+.about h2{font-family:'Playfair Display',serif;font-size:38px;color:var(--navy);margin:15px 0}
+.about p{color:#667386;line-height:1.9;margin-bottom:18px}
+.services{background:#edf1f6}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;padding:32px 25px;border-radius:9px;border:1px solid #e5eaf0;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px #102c4c12}
+.card .icon{font-size:32px;margin-bottom:20px}
+.card h3{color:var(--navy);margin-bottom:12px;font-size:18px}
+.card p{color:#758194;font-size:14px;line-height:1.8}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.step{text-align:center;padding:20px}
+.number{width:55px;height:55px;background:var(--navy);color:var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;font-weight:800;font-size:20px}
+.step h3{margin-bottom:12px;color:var(--navy)}
+.step p{color:#758194;font-size:14px;line-height:1.8}
+.cta{background:linear-gradient(120deg,#071629,#15395b);color:white;text-align:center}
+.cta h2{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:15px}
+.cta p{color:#cbd5e1;line-height:1.8}
+footer{background:#04101f;color:#c4cedb;padding:45px 7% 20px}
+.footer-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}
+footer h3{color:white;margin-bottom:15px}
+footer p,footer a{font-size:13px;line-height:2;color:#aab6c5}
+footer a{display:block;text-decoration:none}
+.copy{text-align:center;border-top:1px solid #ffffff20;margin-top:35px;padding-top:20px;font-size:12px}
+@media(max-width:700px){
+ nav{display:none;position:absolute;top:65px;left:0;width:100%;background:#071629;padding:25px;flex-direction:column;align-items:flex-start}
+ nav.open{display:flex}
+ .menu{display:block}
+ .hero{min-height:560px;background-position:60% center}
+ .hero-content{padding:65px 7%}
+ section{padding:65px 6%}
+ .about{grid-template-columns:1fr;gap:25px}
+ .about img{height:260px}
+ .cards{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr}
+ .heading h2{font-size:30px}
+ .cta h2{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">FUTURE FIT <span>INTERNATIONAL</span></div>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#process">How It Works</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="tag">WELCOME TO FUTURE FIT INTERNATIONAL</div>
+<h1>Your Future.<br>Your Journey.<br><span>Our Commitment.</span></h1>
+<p>Discover new opportunities around the world. Let us help you take the next step towards your international ambitions.</p>
+<div class="actions">
+<a href="#services" class="btn primary">EXPLORE OUR SERVICES →</a>
+<a href="#contact" class="btn secondary">CONTACT US</a>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Professional international team">
+<div>
+<div class="tag">WHO WE ARE</div>
+<h2>Building Bridges to a Better Future</h2>
+<p>Future Fit International is focused on helping people explore international opportunities through professional guidance and dedicated support.</p>
+<p>We believe every journey begins with the right information, proper preparation and a clear direction.</p>
+<a href="#contact" class="btn primary">GET IN TOUCH →</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="heading">
+<small>WHAT WE OFFER</small>
+<h2>Our Services</h2>
+<p>Professional guidance for your next international opportunity.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="icon">🌍</div>
+<h3>International Opportunities</h3>
+<p>Explore international study, travel and other opportunities with helpful guidance.</p>
+</div>
+<div class="card">
+<div class="icon">🛂</div>
+<h3>Passport Guidance</h3>
+<p>Get information and guidance about passport preparation and related documentation.</p>
+</div>
+<div class="card">
+<div class="icon">✈️</div>
+<h3>Travel Assistance</h3>
+<p>Get support with travel preparation, planning and important information.</p>
+</div>
+<div class="card">
+<div class="icon">📚</div>
+<h3>Study Opportunities</h3>
+<p>Explore international education opportunities and application preparation.</p>
+</div>
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Professional Support</h3>
+<p>Receive clear communication and assistance throughout your application journey.</p>
+</div>
+<div class="card">
+<div class="icon">💼</div>
+<h3>Career Opportunities</h3>
+<p>Explore career-related information and opportunities for your future.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process">
+<div class="container">
+<div class="heading">
+<small>YOUR JOURNEY STARTS HERE</small>
+<h2>How It Works</h2>
+<p>A simple approach to getting started.</p>
+</div>
+<div class="steps">
+<div class="step">
+<div class="number">01</div>
+<h3>Contact Us</h3>
+<p>Tell us about your goals and the opportunity you are interested in.</p>
+</div>
+<div class="step">
+<div class="number">02</div>
+<h3>Get Guidance</h3>
+<p>Receive information about requirements and the next steps.</p>
+</div>
+<div class="step">
+<div class="number">03</div>
+<h3>Start Your Journey</h3>
+<p>Prepare your documents and proceed through the appropriate process.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<div class="container">
+<div class="tag">LET'S CONNECT</div>
+<h2>Your Future Starts Today.</h2>
+<p>Have questions or want to learn more about our services?<br>Get in touch with Future Fit International.</p>
+<div class="actions" style="justify-content:center">
+<a href="mailto:contact@example.com" class="btn primary">EMAIL US</a>
+<a href="#home" class="btn secondary">BACK TO TOP ↑</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-grid">
+<div>
+<h3>FUTURE FIT <span style="color:#d6ad62">INTERNATIONAL</span></h3>
+<p>Connecting people with information, guidance and international opportunities.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Our Services</a>
+<a href="#contact">Contact</a>
+</div>
+<div>
+<h3>Our Commitment</h3>
+<p>Professionalism<br>Transparency<br>Customer Support</p>
+</div>
+</div>
+<div class="copy">© 2026 Future Fit International. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
