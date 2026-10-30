@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="am">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Fit International - Registration</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:#f1f5f9;font-family:Arial,sans-serif;color:#172554}
+.container{max-width:600px;margin:20px auto;background:white;padding:25px;border-radius:14px;box-shadow:0 4px 18px #0001}
+h1{text-align:center;color:#123c75;font-size:25px}
+.subtitle{text-align:center;color:#64748b;margin-bottom:25px}
+.notice{background:#fff7ed;border-left:4px solid #ea580c;padding:12px;margin-bottom:20px;border-radius:5px;color:#9a3412}
+label{display:block;font-weight:bold;margin:15px 0 7px}
+input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:7px;font-size:16px}
+button{width:100%;padding:14px;background:#123c75;color:white;border:0;border-radius:8px;font-size:17px;margin-top:22px}
+.small{text-align:center;font-size:13px;color:#64748b;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Future Fit International</h1>
+<p class="subtitle">የምዝገባ ፎርም / Registration Form</p>
+
+<div class="notice">
+ይህ ፎርም ዕድሜያቸው 18 ዓመት እና ከዚያ በላይ ለሆኑ ሰዎች ብቻ ነው። ይህ ሙከራዊ ፎርም ነው፤ ማመልከቻ አሁን አይልክም።
+</div>
+
+<form id="applicationForm">
+<label>ሙሉ ስም / Full Name</label>
+<input type="text" required placeholder="ሙሉ ስም">
+
+<label>ጾታ / Gender</label>
+<select required>
+<option value="">ይምረጡ / Select</option>
+<option>ወንድ / Male</option>
+<option>ሴት / Female</option>
+</select>
+
+<label>የትውልድ ቀን / Date of Birth</label>
+<input type="date" id="dob" required>
+
+<label>የትውልድ ቦታ / Place of Birth</label>
+<input type="text" required>
+
+<label>የትምህርት ደረጃ / Education Level</label>
+<select required>
+<option value="">ይምረጡ / Select</option>
+<option>Primary</option>
+<option>Secondary</option>
+<option>Certificate</option>
+<option>Diploma</option>
+<option>Degree</option>
+<option>Other</option>
+</select>
+
+<label>ፓስፖርት አለዎት? / Do you have a passport?</label>
+<select required>
+<option value="">ይምረጡ / Select</option>
+<option>አዎ / Yes</option>
+<option>የለም / No</option>
+</select>
+
+<label>በካናዳ መስራት የሚፈልጉት ስራ / Desired Work in Canada</label>
+<input type="text" required>
+
+<label>ስልክ ቁጥር / Phone Number</label>
+<input type="tel" required placeholder="09XXXXXXXX">
+
+<label>የአደጋ ጊዜ ተጠሪ ሙሉ ስም / Emergency Contact Name</label>
+<input type="text" required>
+
+<label>የአደጋ ጊዜ ተጠሪ ስልክ / Emergency Contact Phone</label>
+<input type="tel" required>
+
+<button type="submit">ማስገቢያ / Submit</button>
+</form>
+
+<p class="small">Future Fit International</p>
+</div>
+
+<script>
+document.getElementById("applicationForm").addEventListener("submit",function(e){
+e.preventDefault();
+const dob=new Date(document.getElementById("dob").value);
+const today=new Date();
+let age=today.getFullYear()-dob.getFullYear();
+const m=today.getMonth()-dob.getMonth();
+if(m<0||(m===0&&today.getDate()<dob.getDate())) age--;
+if(age<18){
+alert("ይህ ፎርም ለ18 ዓመት እና ከዚያ በላይ ለሆኑ ሰዎች ብቻ ነው።");
+return;
+}
+alert("ይህ የሙከራ ፎርም ነው። መረጃዎ አልተላከም።");
+});
+</script>
+</body>
+</html>
